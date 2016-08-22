@@ -49,7 +49,7 @@ namespace wStoreWebApi.Areas.Classic.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,Name,Description,EventDate,NumberOfAttendees,AddresLine1,AddressLine2,Rating")] Event @event)
+        public async Task<ActionResult> Create([Bind(Include = "Id,Name,Description,EventDate,NumberOfAttendees,AddressLine1,AddressLine2,Rating")] Event @event)
         {
             if (ModelState.IsValid)
             {
@@ -81,7 +81,7 @@ namespace wStoreWebApi.Areas.Classic.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,Name,Description,EventDate,NumberOfAttendees,AddresLine1,AddressLine2,Rating")] Event @event)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,Name,Description,EventDate,NumberOfAttendees,AddressLine1,AddressLine2,Rating")] Event @event)
         {
             if (ModelState.IsValid)
             {

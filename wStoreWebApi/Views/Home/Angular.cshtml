@@ -9,21 +9,24 @@
 
 <div class="page-header">
     <h1>wAppStore API</h1>
-    <h5>Web API 2, Entity Framework 6, Angular , Typescript</h5>
+    <h5>Angular</h5>
 </div>
 
 
 
 <div ng-app="EventApp" class="container">
     <br />
-    <input type="text" placeholder="Search Event" ng-model="searchEvent" />
+    <input type="text" placeholder="Search Event" ng-model="searchEvent" class="form-control" />
     <br />
     <div ng-controller="EventController">
         <table class="table">
             <tr ng-repeat="r in events | filter : searchEvent">
                 <td>{{r.Name}}</td>
                 <td>{{r.Description}}</td>
-             
+                <td>{{r.EventDate.slice(6, -2) | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                <td>{{r.NumberOfAttendees}}</td>
+                <td>{{r.AddressLine1}}</td>
+                <td>{{r.Rating}}</td>
             </tr>
         </table>
     </div>
