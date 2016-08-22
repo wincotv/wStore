@@ -19,7 +19,7 @@ namespace wStoreData.Model
         public string Description { get; set; }
         public System.DateTimeOffset EventDate { get; set; }
         public int NumberOfAttendees { get; set; }
-        public string AddresLine1 { get; set; }
+        public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
         public int Rating { get; set; }
     }

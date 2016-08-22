@@ -22,7 +22,7 @@
           <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="EventDate" Type="datetimeoffset" Precision="7" Nullable="false" />
           <Property Name="NumberOfAttendees" Type="int" Nullable="false" />
-          <Property Name="AddresLine1" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="AddressLine1" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="AddressLine2" Type="nvarchar" MaxLength="100" />
           <Property Name="Rating" Type="int" Nullable="false" />
         </EntityType>
@@ -119,7 +119,7 @@
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="EventDate" Type="DateTimeOffset" Nullable="false" Precision="7" />
           <Property Name="NumberOfAttendees" Type="Int32" Nullable="false" />
-          <Property Name="AddresLine1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="AddressLine2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Rating" Type="Int32" Nullable="false" />
         </EntityType>
@@ -156,7 +156,7 @@
               <MappingFragment StoreEntitySet="Event">
                 <ScalarProperty Name="Rating" ColumnName="Rating" />
                 <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
-                <ScalarProperty Name="AddresLine1" ColumnName="AddresLine1" />
+                <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
                 <ScalarProperty Name="NumberOfAttendees" ColumnName="NumberOfAttendees" />
                 <ScalarProperty Name="EventDate" ColumnName="EventDate" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
