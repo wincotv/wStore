@@ -1,0 +1,32 @@
+﻿@section scripts {
+    @Scripts.Render("~/bundles/app")
+
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/Angular/Events.js"></script>
+}
+
+
+
+<div class="page-header">
+    <h1>wAppStore API</h1>
+    <h5>Web API 2, Entity Framework 6, Angular , Typescript</h5>
+</div>
+
+
+
+<div ng-app="EventApp" class="container">
+    <br />
+    <input type="text" placeholder="Search Event" ng-model="searchEvent" />
+    <br />
+    <div ng-controller="EventController">
+        <table class="table">
+            <tr ng-repeat="r in events | filter : searchEvent">
+                <td>{{r.Name}}</td>
+                <td>{{r.Description}}</td>
+             
+            </tr>
+        </table>
+    </div>
+
+</div>
+

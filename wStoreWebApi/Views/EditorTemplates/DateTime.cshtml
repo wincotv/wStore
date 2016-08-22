@@ -1,0 +1,27 @@
+﻿@model System.DateTime?
+
+
+@{
+
+    var date = Model.HasValue ? Model.Value : DateTime.Now;
+    @Html.TextBox("", date.ToString("dd-MM-yyyy"), new { @class = "form-control ", id = "dt_" + @Html.IdForModel() }) // , @readonly="readonly"
+
+}
+
+
+<script type="text/javascript">
+
+    if ($('#dt_@Html.IdForModel()').attr('readonly') != 'readonly')
+    {
+
+        $('#dt_@Html.IdForModel()').datepicker(
+        {
+            format: 'dd-mm-yyyy',
+            autoclose: true,
+        }
+        );
+
+    }
+
+</script>
+

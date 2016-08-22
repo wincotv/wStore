@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "wStore Test";
+}
+
+<div class="jumbotron">
+    <h1>wStore Test</h1>
+    <p class="lead">MVC5, Konckout/angular, EF6, MSSQL, WebAPI</p>
+    <p><a class="btn btn-primary btn-lg" href="http://winco.azurewebsites.net">W.I.N.C.O.'s page &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Typescript</h2>
+        <p>
+            ...
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Knockout", "Home")">Here &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Angular</h2>
+        <p>...</p>
+        <p><a class="btn btn-default" href="@Url.Action("Angular", "Home")">Here &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web API</h2>
+        <p>...</p>
+        <p><a class="btn btn-default" href="@Url.Action("Index", "Help", new { area = "" })">Here &raquo;</a></p>
+    </div>
+</div>
