@@ -31,7 +31,7 @@ namespace wStoreWebApi
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                       "~/Scripts/knockout-{version}.js",
-                      "~/Scripts/ViewModel/ts-model.js"));
+                      "~/Scripts/Typescript/ts-model.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                       "~/Scripts/angular.js"));
