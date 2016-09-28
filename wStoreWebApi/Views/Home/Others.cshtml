@@ -1,0 +1,189 @@
+﻿@model List<wStoreWebApi.Controllers.CustomerModel>
+
+@section scripts {
+    @Scripts.Render("~/bundles/app")
+
+@*<link href="~/Content/Angular.treeview.css" rel="stylesheet" />
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+<script src="~/Scripts/Angular/Angular.treeview.js"></script>*@
+
+     <!--Kendo style reference files-->
+<link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.2.714/styles/kendo.common.min.css" />
+<link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.2.714/styles/kendo.flat.min.css" />
+<link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.2.714/styles/kendo.default.mobile.min.css" />
+
+<!--kendo script reference files-->
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://kendo.cdn.telerik.com/2016.1.412/js/angular.min.js"></script>
+<script src="http://kendo.cdn.telerik.com/2016.1.412/js/jszip.min.js"></script>
+<script src="http://kendo.cdn.telerik.com/2016.1.412/js/kendo.all.min.js"></script>
+
+}
+
+<div class="page-header">
+    <h1>Others samples</h1>
+    <h5>Displa Xml</h5>
+</div>
+
+
+ <!--Kendo ui elements-->
+<!--Here k-options is kendo angular directive-->
+<div id="example" ng-app="KendoGridDemo">
+    <h3>CRUD operations on Kendo grid using Angualr JS & webapi</h3>
+    <div ng-controller="Controller">
+        <kendo-grid k-options="mainGridOptions">
+        </kendo-grid>
+    </div>
+</div>
+
+<script>
+        //Create a anular app and controller add kendo dependency to app
+        angular.module("KendoGridDemo", ["kendo.directives"])
+            .controller("Controller", function ($scope) {
+                //specify kendo grid options
+                $scope.mainGridOptions = {
+                    dataSource: {
+                        type: "json",   //data type
+                        transport: {
+                            destroy: {
+                                url: "api/TStudentsAPI",
+                                type: "DELETE"
+                            }, read: {
+                                url: "api/TStudentsApi",    //http://localhost:13547/
+                                dataType: "json",
+                            },
+                            create:
+                            {
+                                url: "api/TStudentsAPI",    //http://localhost:13547/
+                                type: "POST"
+                            },
+                            update:
+                            {
+                                url: "api/TStudentsAPI",
+                                type: "PUT",
+                                parameterMap: function (options, operation) {
+                                    if (operation !== "read" && options.models) {
+                                        return {
+                                            models: kendo.stringify(options.models)
+                                        };
+                                    }
+                                }
+                            },
+                        },
+                        schema: //schema of the table data
+                                 {
+                                     model:
+                                     {
+                                         id: "StudentID",
+                                         fields: {
+                                             StudentID: { editable: false, nullable: false, type: "number" },
+                                             FullName: { editable: true, nullable: true, type: "string" },
+                                             Contact: { editable: true, nullable: true, type: "number" },
+                                             Country: { editable: true, nullable: true, type: "string" },
+                                             Designation: { editable: true, nullable: true, type: "string" }
+                                         }
+                                     }
+                                 },
+                        pageSize: 5,
+                        serverPaging: true,
+                        serverSorting: true
+                    },
+                    editable: "popup",      //editable type popup/inline/batch
+                    toolbar: ["create"],    //toolbar options
+                    sortable: {
+                        mode: "single",  //sorting
+                        allowUnsort:true
+                    },
+                    pageable: {          //paging
+                        buttonCount: 5
+                    },
+                    resizeable: true,       //resizing
+                    scrollable: false,
+                    //specify columns that you want to display
+                    columns: [{
+                        field: "StudentID",
+                        title: "Student ID",
+                        width: "180px"
+                    },
+                    {
+                        field: "FullName",
+                        title: "FullName",
+                        width: "180px"
+                    },
+                    {
+                        field: "Contact",
+                        title: "Contact",
+                        width: "180px"
+                    },
+                    {
+                        field: "Country",
+                        title: "Country",
+                        width: "180px"
+                    },
+                    {
+                        field: "Designation",
+                        title: "Designation",
+                        width: "180px"
+                    },
+                    //actions columns contains-- edit/delete
+                        {
+                            title:"Actions",
+                            command: ["edit",
+                            {
+                                name: "destroy",
+                                text: "Delete",
+                                width: "120px"
+                            }
+                            ],
+                        }
+                    ]
+                };
+            });
+</script>
+
+
+@*<h2>DisplayXMl Data in Webpage</h2>
+<table class="table table-responsive table-bordered">
+    <thead style="background-color:Highlight">
+        <tr>
+            <th>Customer ID</th>
+            <th>Customer Name</th>
+            <th>Contact</th>
+            <th>Date Of Joining</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CustomerID</td>
+                <td>@item.CustomerName</td>
+                <td>@item.Contact</td>
+                <td>@item.DateOfPurchase</td>
+                <td>@item.Address</td>
+            </tr>
+        }
+    </tbody>
+</table>*@
+
+
+@*<h3>Angular Tree view</h3>
+<div ng-app="app" ng-controller="treecontroller">
+    <div data-angular-treeview="true"
+         data-tree-id="mytree"
+         data-tree-model="List"
+         data-node-id="FileID"
+         data-node-label="FileName"
+         data-node-children="Childs">
+    </div>
+</div>
+<script type="text/javascript">
+    var app = angular.module('app', ['angularTreeview']);
+    app.controller('treecontroller', function ($scope, $http) {
+        $http.get('/Home/GetFileStructure').then(function (response) {
+            $scope.List = response.data.treeList;
+        });
+    });
+</script>*@
+

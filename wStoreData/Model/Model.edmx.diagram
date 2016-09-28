@@ -9,6 +9,8 @@
         <EntityTypeShape EntityType="Model.StoreItem" Width="1.5" PointX="3.5" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="Model.FK_dbo_StoreItems_dbo_Authors_AuthorId" ManuallyRouted="false" />
         <EntityTypeShape EntityType="Model.Event" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.TFileStructure" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="Model.TStudent" Width="1.5" PointX="5.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -213,8 +213,10 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AuthorsController.cs" />
+    <Compile Include="Controllers\CustomerModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StoreItemsController.cs" />
+    <Compile Include="Controllers\TStudentsApiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -227,6 +229,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Customer.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\wStoreWebApiContext-20160816082939.mdf" />
     <Content Include="App_Data\wStoreWebApiContext-20160816082939_log.ldf">
       <DependentUpon>wStoreWebApiContext-20160816082939.mdf</DependentUpon>
@@ -273,6 +278,7 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\Angular\Events.js" />
+    <Content Include="Scripts\Angular\Angular.treeview.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-datepicker.min.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
@@ -1144,6 +1150,7 @@
     <Content Include="Areas\Classic\Views\Events\Details.cshtml" />
     <Content Include="Areas\Classic\Views\Events\Edit.cshtml" />
     <Content Include="Areas\Classic\Views\Events\Index.cshtml" />
+    <Content Include="Content\Angular.treeview.css" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1178,10 +1185,12 @@
     <Content Include="Views\EditorTemplates\DateTime.cshtml" />
     <Content Include="Views\DisplayTemplates\DateTime.cshtml" />
     <Content Include="Scripts\version.json" />
+    <Content Include="Views\Home\Others.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Classic\Models\" />
     <Folder Include="Areas\Classic\Views\Shared\" />
+    <Folder Include="Views\Students\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

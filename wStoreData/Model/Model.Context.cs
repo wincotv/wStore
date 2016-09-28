@@ -28,5 +28,7 @@ namespace wStoreData.Model
         public virtual DbSet<Author> Authors { get; set; }
         public virtual DbSet<StoreItem> StoreItems { get; set; }
         public virtual DbSet<Event> Events { get; set; }
+        public virtual DbSet<TFileStructure> TFileStructures { get; set; }
+        public virtual DbSet<TStudent> TStudents { get; set; }
     }
 }

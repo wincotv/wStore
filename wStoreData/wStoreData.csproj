@@ -100,6 +100,13 @@
     <Compile Include="Model\StoreItem.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\TFileStructure.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TFileStructurePartial.cs" />
+    <Compile Include="Model\TStudent.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\wStoreData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

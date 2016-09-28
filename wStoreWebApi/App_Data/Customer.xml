@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Customer>
+	<Customer>
+		<CustomerID>1</CustomerID>
+		<CustomerName>Raviteja</CustomerName>
+		<Contact>907483438</Contact>
+		<DateOfPurchase>9/3/2016 12:00:00 AM</DateOfPurchase>
+		<Address>Hyderabad</Address>
+	</Customer>
+	<Customer>
+		<CustomerID>1</CustomerID>
+		<CustomerName>Rajkumar</CustomerName>
+		<Contact>907483438</Contact>
+		<DateOfPurchase>9/3/2016 12:00:00 AM</DateOfPurchase>
+		<Address>Hyderabad</Address>
+	</Customer>
+	<Customer>
+		<CustomerID>1</CustomerID>
+		<CustomerName>Venkatesh</CustomerName>
+		<Contact>907483438</Contact>
+		<DateOfPurchase>9/3/2016 12:00:00 AM</DateOfPurchase>
+		<Address>Hyderabad</Address>
+	</Customer>
+	<Customer>
+		<CustomerID>1</CustomerID>
+		<CustomerName>Lucyfrank</CustomerName>
+		<Contact>907483438</Contact>
+		<DateOfPurchase>9/3/2016 12:00:00 AM</DateOfPurchase>
+		<Address>Hyderabad</Address>
+	</Customer>
+	<Customer>
+		<CustomerID>1</CustomerID>
+		<CustomerName>Chanakya Mandava</CustomerName>
+		<Contact>907483438</Contact>
+		<DateOfPurchase>9/3/2016 12:00:00 AM</DateOfPurchase>
+		<Address>Hyderabad</Address>
+	</Customer>
+	<Customer>
+		<CustomerID>1</CustomerID>
+		<CustomerName>Sai Nithin</CustomerName>
+		<Contact>907483438</Contact>
+		<DateOfPurchase>9/3/2016 12:00:00 AM</DateOfPurchase>
+		<Address>Hyderabad</Address>
+	</Customer>
+	<Customer>
+		<CustomerID>1</CustomerID>
+		<CustomerName>Venu gopal</CustomerName>
+		<Contact>907483438</Contact>
+		<DateOfPurchase>9/3/2016 12:00:00 AM</DateOfPurchase>
+		<Address>Hyderabad</Address>
+	</Customer>
+	<Customer>
+		<CustomerID>1</CustomerID>
+		<CustomerName>ketana</CustomerName>
+		<Contact>907483438</Contact>
+		<DateOfPurchase>9/3/2016 12:00:00 AM</DateOfPurchase>
+		<Address>Hyderabad</Address>
+	</Customer>
+	<Customer>
+		<CustomerID>1</CustomerID>
+		<CustomerName>Anu</CustomerName>
+		<Contact>907483438</Contact>
+		<DateOfPurchase>9/3/2016 12:00:00 AM</DateOfPurchase>
+		<Address>Hyderabad</Address>
+	</Customer>
+</Customer>

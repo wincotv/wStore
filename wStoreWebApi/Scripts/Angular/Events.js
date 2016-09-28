@@ -25,3 +25,11 @@ EventApp.factory('EventService', ['$http', function ($http) {
     return EventService;
 
 }]);
+
+var app = angular.module('myApp', ['angularTreeview']);
+
+app.controller('HomeController', function ($scope, $http) {
+    $http.get('/Home/GetFileStructure').then(function (response) {
+        $scope.List = response.data.treeList;
+    });
+});
